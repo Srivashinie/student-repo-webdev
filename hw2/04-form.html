@@ -11,6 +11,77 @@
     <main>
       <h1>Exercise 04 - Form</h1>
       <!-- Add your code here -->
+      <div class="form-container">
+        <form class="form">
+          <h2>Sign Up Form</h2>
+          <p>Fill up the items in the form below.</p>
+          <div class="form-fields">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+
+          <br />
+          <div class="form-fields">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <br />
+          <div class="form-fields">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <br />
+          <div class="form-fields">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <br />
+          <div class="form-fields">
+            <label for="date_of_birth">Date of birth:</label>
+            <input type="date" id="date_of_birth" name="date of birth" />
+          </div>
+          <br />
+          <fieldset class="fieldset">
+            <legend>Preferred Pronouns</legend>
+            <input
+              type="radio"
+              name="Preferred pronouns"
+              id="She/her"
+              value="She/her" />
+            <label for="She/her" class="radio">She/her</label>
+            <br />
+            <input
+              type="radio"
+              name="Preferred pronouns"
+              id="He/Him"
+              value="He/Him" />
+            <label for="He/Him" class="radio">He/Him</label>
+            <br />
+            <input
+              type="radio"
+              name="Preferred pronouns"
+              id="They/Them"
+              value="They/Them" />
+            <label for="They/Them" class="radio">They/Them</label>
+            <br />
+            <input
+              type="radio"
+              name="Preferred pronouns"
+              id="I_prefer_not_to_say"
+              value="I prefer not to say" />
+            <label for="I_prefer_not_to_say" class="radio"
+              >I prefer not to say</label
+            >
+          </fieldset>
+
+          <br />
+          <div class="button">
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="reset">Reset</button>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>

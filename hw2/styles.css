@@ -10,10 +10,11 @@
   --teal: #006060;
   --violetred: #a2106d;
   --orange: #ffa500;
+  --lightgray: lightgray;
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -27,9 +28,258 @@ form {
 }
 
 /* Code for exercise 01-navbar */
+.navigation_container {
+  display: flex;
+  justify-content: center;
+}
+
+.Navigation {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--black);
+  overflow: hidden;
+  margin: -0.5em;
+}
+
+.Navigation a {
+  display: flex;
+  color: var(--white);
+  padding: 20px 25px 20px 25px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.Navigation a:hover {
+  background-color: var(--violetred);
+}
+
+@media (max-width: 800px) {
+  .navigation_container {
+    justify-content: center;
+  }
+  .Navigation {
+    justify-content: center;
+  }
+  .Navigation a {
+    padding: 20px 29px 20px 29px;
+  }
+}
 
 /* Code for exercise 02-cards */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card {
+  height: 550px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.card-content {
+  padding: 12px;
+  border: 1px solid var(--black);
+}
+
+.card h2 {
+  text-align: center;
+  padding: 0;
+}
+
+.card p {
+  padding: 6px;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 200px;
+}
+
+.buttons {
+  background-color: var(--black);
+  color: var(--white);
+  width: 95%;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 10px;
+  border-style: solid;
+}
+
+.buttons:hover {
+  background-color: var(--violetred);
+  border-color: var(--violetred);
+  border-style: solid;
+}
+
+@media (max-width: 800px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    padding-bottom: 0px;
+  }
+}
 
 /* Code for exercise 03-table */
+.table {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  table-layout: fixed;
+}
+
+.table tr,
+th,
+td {
+  border: 1px var(--black) solid;
+  padding: 2%;
+  word-break: break-word;
+}
+
+.table th {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  word-break: break-word;
+}
+
+.column1 {
+  background-color: var(--violetred);
+  color: var(--white);
+  text-align: center;
+  font-weight: bold;
+}
+
+.table tr:hover {
+  background-color: var(--orange);
+}
 
 /* Code for exercise 04-form */
+.form p {
+  margin-top: 0;
+  padding: 2px;
+  color: var(--gray);
+  margin-left: 3px;
+}
+
+.form h2 {
+  margin-bottom: 0;
+  margin-left: 3px;
+  padding: 1px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form {
+  border: var(--black) solid;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.form label {
+  padding: 3px;
+}
+
+.form-fields {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.form-fields label,
+.fieldset legend {
+  flex: 1;
+  margin-right: 20px;
+  white-space: nowrap;
+  text-align: left;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="email"],
+.form-fields input[type="password"] {
+  flex: 2;
+  padding: 3px;
+  border-color: var(--black);
+  border-style: solid;
+  border-width: 1.5px;
+  margin-left: 10px;
+  margin-right: 6px;
+}
+
+.form-fields input[type="date"] {
+  flex: 2;
+  width: 100%;
+  padding: 3px;
+  border-color: var(--black);
+  border-style: solid;
+  border-width: 1.5px;
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+.fieldset {
+  border: 0 none;
+  text-align: left;
+  padding: 0;
+}
+
+.fieldset legend {
+  padding-bottom: 1px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.button button {
+  padding: 10px 20px;
+  margin: 3px;
+}
+
+.button button[type="submit"] {
+  background-color: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+  border-style: solid;
+  width: 48%;
+  padding: 6px;
+}
+
+.button button[type="reset"] {
+  background-color: var(--white);
+  border-color: var(--black);
+  border-style: solid;
+  color: var(--black);
+  padding: 6px;
+  width: 48%;
+}
+
+.button button[type="submit"]:hover {
+  background-color: var(--violetred);
+  border-color: var(--violetred);
+  border-style: solid;
+}
+
+.button button[type="reset"]:hover {
+  background-color: var(--lightgray);
+}
