@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -34,7 +34,9 @@ form {
 }
 
 /* Code for exercise 01-hello */
-
+.bio::first-line {
+  font-weight: bold;
+}
 /* Code for exercise 02-form */
 
 /* Code for exercise 03-starships */
@@ -50,4 +52,92 @@ form {
 .btn {
   width: 80px;
   padding: 10px;
+  color: var(--white);
+  background-color: var(--black);
+  border-color: var(--black);
+  border-style: solid;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: var(--violetred);
+  color: var(--white);
+  border-color: var(--violetred);
+  border-style: solid;
+}
+
+.starship-container {
+  border: 1px solid var(--light-light-gray);
+  background-color: var(--white);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  width: 470px;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.border-right {
+  border-right: 2px solid var(--light-gray);
+  height: 80px;
+}
+
+.manufactureby {
+  text-align: left;
+  padding-top: 33px;
+  padding-left: 10px;
+  font-size: 0.9em;
+}
+
+.spaceship-name {
+  float: left;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-left: 10px;
+  margin-left: 9px;
+}
+
+.spaceship-credits {
+  float: right;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-right: 10px;
+}
+
+.speed-and-capacity {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.speed-and-capacity-value {
+  margin: 0;
+  font-weight: bold;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 414px) {
+  .starship-container {
+    width: 380px;
+    height: 200px;
+    font-size: 0.87em;
+  }
+  .spaceship-name,
+  .spaceship-credits {
+    padding-left: 0px;
+    padding-top: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .starship-container {
+    width: 470px;
+    height: 220px;
+    font-size: 1em;
+  }
 }
